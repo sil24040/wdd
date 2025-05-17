@@ -1,7 +1,5 @@
-/* Import the Mooli font */
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
-/* CSS Variables */
 :root {
   --primary-color: #52489c;
   --secondary-color: #59c3c3;
@@ -12,7 +10,6 @@
   --secondary-font: Mooli, sans-serif;
 }
 
-/* Global Styles */
 body {
   font-family: var(--primary-font);
   font-size: 1.2em;
@@ -27,7 +24,6 @@ a:visited {
   text-decoration: none;
 }
 
-/* Header */
 header {
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -40,19 +36,17 @@ h1 {
   margin: 0;
 }
 
-/* Navigation (initially hidden on mobile) */
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: none; /* We'll toggle this with JS later */
+  display: none;
 }
 
 nav ul li {
   margin: 0.5rem 0;
 }
 
-/* Menu button */
 #menuButton {
   background: none;
   border: none;
@@ -61,16 +55,14 @@ nav ul li {
   cursor: pointer;
 }
 
-/* Main content */
 main h2 {
   text-align: center;
   font-family: var(--secondary-font);
 }
 
-/* Gallery */
 .gallery {
   display: grid;
-  grid-template-columns: 1fr; /* one column on mobile */
+  grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem;
 }
@@ -85,7 +77,6 @@ main h2 {
   border-radius: 10px;
 }
 
-/* Footer */
 footer {
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -94,27 +85,59 @@ footer {
   font-size: 0.9rem;
 }
 
-/* First breakpoint: 700px */
+/* Modal Styles */
+dialog.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  padding: 0;
+  position: fixed;
+  z-index: 10;
+}
+
+.modal-img {
+  display: block;
+  width: 90%;
+  max-height: 80%;
+  margin: 20vh auto 0;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 20vh;
+  right: 5%;
+  font-size: 1.5rem;
+  background: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Hide Class */
+.hide {
+  display: none;
+}
+
+/* Breakpoints */
 @media screen and (min-width: 700px) {
-    .gallery {
-      grid-template-columns: 1fr 1fr; /* 2 columns */
-    }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
   }
-  
-  /* Second breakpoint: 1000px */
-  @media screen and (min-width: 1000px) {
-    nav ul {
-      display: flex;               /* Show nav links horizontally */
-      justify-content: center;     /* Center the links */
-      gap: 1rem;                   /* Space between links */
-    }
-  
-    #menuButton {
-      display: none;               /* Hide the Menu button on large screens */
-    }
-  
-    .gallery {
-      grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
-    }
+}
+
+@media screen and (min-width: 1000px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
   }
-  
+
+  #menuButton {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

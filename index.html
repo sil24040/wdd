@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Charset Attribute -->
     <meta charset="UTF-8">
-    
-    <!-- Title Element -->
     <title>Cool Pics 📷</title>
-    
-    <!-- Viewport Meta Element -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Description Element -->
     <meta name="description" content="A responsive photo gallery showcasing cool pictures.">
-    
-    <!-- Meta Author Element -->
     <meta name="author" content="Sophie">
-    
-    <!-- Link reference to CSS file -->
     <link rel="stylesheet" href="coolpics.css">
-    
-    <!-- Script Element linking to JavaScript file -->
     <script src="coolpics.js" defer></script>
 </head>
 <body>
@@ -27,7 +14,7 @@
         <h1>Cool Pics 📷</h1>
         <button id="menuButton">Menu</button>
         <nav>
-            <ul>
+            <ul class="hide">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">About</a></li>
@@ -49,6 +36,11 @@
             <figure><img src="norris-sm.jpeg" alt="Chuck Norris in the wild"></figure>
         </section>
     </main>
+
+    <dialog class="modal">
+        <img class="modal-img" src="" alt="">
+        <button class="close-viewer">X</button>
+    </dialog>
 
     <footer>
         <p>©2023 Not a real site 😀</p>
