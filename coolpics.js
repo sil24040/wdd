@@ -5,12 +5,10 @@ const modalImg = document.querySelector(".modal-img");
 const closeBtn = document.querySelector(".close-viewer");
 const gallery = document.querySelector(".gallery");
 
-// Toggle menu visibility
 menuButton.addEventListener("click", () => {
   navMenu.classList.toggle("hide");
 });
 
-// Handle resize
 function handleResize() {
   if (window.innerWidth > 1000) {
     navMenu.classList.remove("hide");
@@ -21,7 +19,6 @@ function handleResize() {
 window.addEventListener("resize", handleResize);
 window.addEventListener("load", handleResize);
 
-// Image viewer
 gallery.addEventListener("click", (event) => {
   const img = event.target.closest("img");
   if (img) {
